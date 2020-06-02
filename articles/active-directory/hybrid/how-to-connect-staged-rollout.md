@@ -121,13 +121,13 @@ Enable *seamless SSO* by doing the following:
 
 1. Sign in to Azure AD Connect Server.
 
-2. Go to the *%programfiles%\\Microsoft Azure Active Directory Connect* folder.
+2. Run PowerShell as an administrator. In PowerShell, go to the *%programfiles%\\Microsoft Azure Active Directory Connect* folder.
 
-3. Import the *seamless SSO* PowerShell module by running the following command: 
+3. Import the *seamless SSO* PowerShell module by running the following command in PowerShell: 
 
    `Import-Module .\AzureADSSO.psd1`
 
-4. Run PowerShell as an administrator. In PowerShell, call `New-AzureADSSOAuthenticationContext`. This command opens a pane where you can enter your tenant's global administrator credentials.
+4. In PowerShell, call `New-AzureADSSOAuthenticationContext`. This command opens a pane where you can enter your tenant's global administrator credentials.
 
 5. Call `Get-AzureADSSOStatus | ConvertFrom-Json`. This command displays a list of Active Directory forests (see the "Domains" list) on which this feature has been enabled. By default, it is set to false at the tenant level.
 
